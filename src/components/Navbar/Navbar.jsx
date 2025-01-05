@@ -8,7 +8,7 @@ const Navbar = () => {
     {
       id: "home",
       name: "Home",
-      link: "/",
+      link: "/home",
     },
     {
       id: "about",
@@ -66,7 +66,10 @@ const Navbar = () => {
           <ul className="list-none lg:flex md:flex sm:block block items-center gap-x-5 gap-y-16">
             {navItems.map((item) => (
               <li key={item.id}>
-                <Link className="text-gray-500 text-lg font-medium hover:text-indigo-600 ease-out duration-700">
+                <Link
+                  to={item.link}
+                  className="text-gray-500 text-lg font-medium hover:text-indigo-600 ease-out duration-700"
+                >
                   {item.name}
                 </Link>
               </li>

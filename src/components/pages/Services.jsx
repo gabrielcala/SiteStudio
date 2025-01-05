@@ -1,4 +1,5 @@
 import { Dumbbell } from "lucide-react";
+
 import dois from "../../assets/post1.jpeg";
 import capoeira from "../../assets/capoeira.png";
 import taichi from "../../assets/taichiyang.jpg";
@@ -6,14 +7,17 @@ import yoga from "../../assets/yoga2.jpg";
 import medita from "../../assets/medita.jpg";
 import pilates from "../../assets/pilates.jpg";
 
+import { useNavigate } from "react-router-dom";
+
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       id: 1,
       serviceImg: `${dois}`,
       title: "Funcional",
       desc: "Aptidão cardio vascular, perda de peso, resistência.",
-      link: "#services",
+      link: "/hours",
     },
     {
       id: 2,
@@ -34,7 +38,7 @@ const Services = () => {
       serviceImg: `${capoeira}`,
       title: "Capoeira",
       desc: "Arte marcial, dança, musica, cultura, diversão .",
-      link: "#services",
+      link: "/Capoeira",
     },
     {
       id: 5,
@@ -86,6 +90,16 @@ const Services = () => {
                 <p className="text-base text-gray-400 font-normal text-center mb-4">
                   {sdata.desc}
                 </p>
+
+                <button
+                  className={
+                    "text-base text-gray-200 bg-indigo-600 font-medium px-3 py-1.5 rounded gap-x-1 hover:bg-indigo-600/70 ease-out duration-500"
+                  }
+                  onClick={() => navigate(sdata.link)}
+                >
+                  {" "}
+                  Saber Mais
+                </button>
               </div>
             </div>
           ))}

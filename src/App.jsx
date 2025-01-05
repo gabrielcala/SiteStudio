@@ -5,10 +5,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 export default function App() {
   return (
     <div className="w-full min-h-screen h-auto bg-[#353434]">
-      <Router>
-        <Navbar />
-        <Home />
-      </Router>
+      <Navbar />
+      <Home />
     </div>
   );
 }
