@@ -27,7 +27,10 @@ const Imc = () => {
   }
 
   return (
-    <div className="flex justify-evenly w-full mr-32 items-center bg-slate-500 h-24 rounded-full">
+    <div
+      className="flex justify-center w-full mr-32 items-center bg-slate-500 h-auto rounded-full lg:flex-row
+            md:flex-col sm:flex-col"
+    >
       <div>
         <label className="text-indigo-700 pr-4 font-bold">Seu peso:</label>
         <input
@@ -37,7 +40,7 @@ const Imc = () => {
           className="rounded-2xl"
         />
       </div>
-      <div>
+      <div className="py-10">
         <label className="text-indigo-700 pr-4 font-bold">
           Sua altura em cm:
         </label>
